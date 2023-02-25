@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Catan.Views.ServerMenu"
+             BackgroundColor="#FFFFFF">
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="Center">
+        <ScrollView>
+            <VerticalStackLayout
+            
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+                <Image
+                Source="server_logo.png"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+                <Label
+                Text="Catan Server"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+                <Button
+                BackgroundColor="#3381CB"
+                x:Name="StartButton"
+                Text="Start Server"
+                Clicked="StartServer"
+                HorizontalOptions="Center" />
+                    <Button
+                BackgroundColor="#3381CB"
+                x:Name="Start"
+                Text="Start Server"
+                Clicked="StartGame"
+                HorizontalOptions="Center" />
+
+                </VerticalStackLayout>
+        </ScrollView>
+        
+        <ScrollView MinimumWidthRequest="200">
+            <VerticalStackLayout HorizontalOptions ="Center">
+                <Label FontSize="20">Log's</Label>
+                    <VerticalStackLayout x:Name="LogContent">
+                    </VerticalStackLayout>
+                    <Button Text="Clear Logs"   Clicked="Button_Clicked"    BackgroundColor="#3381CB"></Button>
+                </VerticalStackLayout>
+        </ScrollView>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
